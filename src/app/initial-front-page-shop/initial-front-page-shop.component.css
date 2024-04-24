@@ -1,0 +1,131 @@
+/* styles.css */
+
+/*.background_index{
+    background-color: white;
+}*/
+
+.title {
+    text-align: center; /* Centra horizontalmente el texto */
+    font-size: 6.25em; /* Tamaño del título */
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+h1{
+    font-weight: bold;
+}
+
+.title p:nth-of-type(1) {
+    font-size: 25px; /* Tamaño de fuente deseado para el segundo párrafo */
+    font-style: italic;
+}
+
+.box_cards::before{
+    content: "";
+    display: block;
+    height: 1.25em; /* Ajusta la cantidad de espacio hacia abajo */
+}
+
+/* Estilos para la sección de las imágenes */
+.box_cards {
+    display: flex;
+    flex-wrap: wrap; /* Hace que las imágenes se envuelvan cuando no hay suficiente espacio */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Añade espacio alrededor de la sección */
+}
+
+.contenedor-imagen {
+    position: relative; /* Establece el posicionamiento relativo */
+    display: inline-block; /* Permite que el contenedor se ajuste al tamaño de la imagen */
+    width: 30em; /* Ancho deseado para el contenedor en em */
+    height: 38em; /* Alto deseado para el contenedor en em */
+    overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Agrega una transición suave al zoom */
+}
+
+.contenedor-imagen:hover img {
+    transform: scale(1.1); /* Aplica el zoom solo a la imagen */
+    cursor: pointer; /* Cambia el cursor a un puntero */
+}
+
+.image{
+    width: 30em; /* Ancho deseado para el contenedor en em */
+    height: 35em; /* Alto deseado para el contenedor en em */
+    overflow: hidden; /* Evita que las imágenes se desborden */
+    position:relative;
+}
+  
+.image img {
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+}
+
+.image:hover img {
+    transform: scale(1.1); /* Aplica el zoom solo a la imagen */
+    cursor: pointer; /* Cambia el cursor a un puntero */
+    transition: transform 0.3s ease; /* Agrega una transición suave al zoom */
+}
+
+/* Estilos para los textos */
+.texto-superpuesto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.texto-superpuesto span {
+    margin: 0; /* Eliminar el margen entre los elementos */
+    padding: 0; /* Eliminar el padding entre los elementos */
+}
+
+.fashionable {
+    font-size: 20px;
+}
+
+.gender {
+    font-size: 40px; /* Cambia el tamaño de la parte "gender" */
+}
+
+/* mobile sizes */
+
+@media (max-width: 767px) {
+    .box_cards {
+      padding: 0; /* Elimina el relleno en dispositivos móviles */
+    }
+  
+    .image {
+      width: 100%; /* Las imágenes ocuparán todo el ancho de la pantalla */
+      height: auto; /* Altura automática para mantener la proporción de aspecto */
+    }
+  
+    .contenedor-imagen,
+    .texto-superpuesto {
+      width: 100%; /* Ajusta el ancho al 100% para ocupar toda la pantalla */
+      text-align: center; /* Centra horizontalmente el contenido */
+    }
+  
+    .contenedor-imagen {
+      height: auto; /* Altura automática para mantener la proporción de aspecto */
+    }
+  
+    .title {
+      margin-top: 50px; /* Aumenta el espacio superior del título en dispositivos móviles */
+      margin-bottom: 50px; /* Aumenta el espacio inferior del título en dispositivos móviles */
+    }
+  }
+  
